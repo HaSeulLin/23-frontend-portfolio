@@ -1,0 +1,88 @@
+$lineColor: #134e5e;
+
+.about-wrap {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 80px);
+  display: flex;
+  overflow: hidden;
+  top: 1vh;
+}
+
+.about-content {
+  height: calc(100% - 80px);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 80px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-content>div:first-child {
+  height: 45%;
+  width: 100%;
+}
+
+.about-content>div:nth-child(2) {
+  height: 40%;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.479);
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+}
+
+.mychar {
+  width: 40%;
+  height: 45%;
+}
+
+.b-sec1,
+.b-sec2,
+.b-sec3 {
+  width: calc(100% - 200px);
+  height: calc(100% - 10px);
+}
+.b-sec2 {
+  margin: 0 20px;
+}
+
+.down {
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.712);
+  animation: scrollbtn 3s ease infinite;
+  -webkit-animation: scrollbtn 3s ease infinite;
+}
+
+@keyframes scrollbtn {
+	0% {
+    transform: translateY(0);
+}
+	40% {
+    transform: translateY(-30%);
+}
+	100% {
+    transform: translateY(0);
+	}
+}

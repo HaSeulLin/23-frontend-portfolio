@@ -1,0 +1,36 @@
+$lineColor : #134E5E;
+
+.stack-wrap {
+    position: relative;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: transparent;
+}
+
+.stack-content {
+    position: absolute;
+    bottom: 0;
+
+    height: calc(100vh - 110px);
+
+    width: 100%;
+}
+
+.section {
+    border-radius: 20px;
+    width: 90%;
+    height: 90%;
+    margin: 5% auto;
+
+    text-align: center;
+}
+
+.footer {
+    border-top: 1px solid $lineColor;
+    width: 100%;
+    height: 100px;
+}
+
+.contact {
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: none;
+}
+
+html,
+body {
+	background: linear-gradient(-45deg, #036b91, #2a99c2, #14a886, #0c6b55);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	cursor: none;
+	-ms-overflow-style: none;
+	/* 인터넷 익스플로러 */
+	scrollbar-width: none;
+	/* 파이어폭스 */
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.cursor {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 1px solid rgba(255,255,255,0.8);
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1000;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	transition: all 0.3s ease;
+	transition-property: background-color, background-size, transform;
+	transform-origin: 100% 100%;
+	backdrop-filter: blur(1px);
+	background-color: rgba(255, 255, 255, 0.2);
+	background-size: cover;
+}
+
+//	transform: scale(2);
+//	background-color: rgba(0, 0, 0, 0.5);

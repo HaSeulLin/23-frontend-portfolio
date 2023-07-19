@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+
+import Home from "./page/Home";
+import Header from "./components/Header";
+import About from "./page/About";
+import Project from "./page/Project";
+import Stack from "./page/Stack";
+import Contact from "./page/Contact";
 
 function App() {
+  // 마우스 위치
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    setPosition({ x: e.clientX, y: e.clientY });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" onMouseMove={(e) => handleMouseMove(e)}>
+      <div
+        className="cursor"
+        style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      ></div>
+
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/" element={<About />} />
+        <Route path="/stack" element={<Stack />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }

@@ -1,0 +1,45 @@
+$lineColor: #134e5e;
+
+.scroll-wrap {
+  height: calc(100vh - 80px);
+  max-height: -webkit-fill-available;
+  width: 100%;
+//   transform: translateY(80px);
+  transition: transform 0.9s ease 0s;
+  overflow-y: auto;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  position: fixed;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+.scroll-section {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+}
+
+.scroll-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.main-slide-wrapper {
+  position: fixed;
+  display: flex;
+  list-style-type: none;
+  /* will-change 부분!*/
+  will-change: transform;
+}
+.main-slide-wrapper li {
+  width: 100vw;
+  height: 100vh;
+  background-color: skyblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 32px;
+}

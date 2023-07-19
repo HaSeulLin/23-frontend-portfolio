@@ -1,0 +1,103 @@
+$light-green: #bcdbcd;
+$dark-green: #30493d;
+
+.header {
+    width: 100%;
+}
+
+.container {
+    height: 80px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section {
+    height: 60px;
+    border: 1px soild $light-green;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.profile {
+    width: 200px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prof-img {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 5px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.prof-text {
+    height: 50px;
+    width: 136px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prof-text>h6 {
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.486);
+}
+
+.menu {
+    width: 800px;
+}
+
+.menu-list {
+    width: 740px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+
+.menu-list>a,
+.menu-burger {
+    height: 50px;
+    box-sizing: border-box;
+    margin-right: 5px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.menu-list>a {
+    width: 180px;
+}
+
+
+.menu-burger {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.update {
+    width: 200px;
+}
+
+.on {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+  transition: transform 0.9s ease 0s;
+
+}
+
+.off {
+    font-size: 15px;
+  transition: transform 0.9s ease 0s;
+
+}
