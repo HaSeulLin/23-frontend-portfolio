@@ -1,36 +1,119 @@
-$lineColor : #134E5E;
+$bColor: rgba(186, 173, 182, 1);
+$dColor: rgba(0, 0, 5, 1);
 
 .stack-wrap {
     position: relative;
-    height: calc(100vh - 80px);
     width: 100%;
-    background-color: transparent;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    overflow: hidden;
+    //   top: 1vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+.stack-wrap>h1 {
+    margin: 20px auto;
 }
 
 .stack-content {
-    position: absolute;
-    bottom: 0;
+    height: calc(100vh - 200px);
+    max-width: 1500px;
+    min-width: 900px;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+    justify-content: flex-start;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+}
 
-    height: calc(100vh - 110px);
+.stack-content>div:first-child {
+    height: 50%;
+}
 
-    width: 100%;
+.stack-content>div:nth-child(2) {
+    height: 40%;
+    width: 45vw;
+    display: flex;
+    margin-top: 20px;
 }
 
 .section {
+    max-width: 1500px;
+    min-width: 900px;
+    border: 1px solid $bColor;
     border-radius: 20px;
-    width: 90%;
-    height: 90%;
-    margin: 5% auto;
-
-    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.footer {
-    border-top: 1px solid $lineColor;
+.backend {
+
+    max-width: 490px;
+    min-width: 290px;
+    margin-right: 10px;
+}
+
+.tool {
+    max-width: 990px;
+    min-width: 590px;
+    margin-left: 10px;
+}
+
+.section>h2 {
+    padding: 20px 0;
+    border-bottom: 1px solid $bColor;
+}
+
+.section>div {
+    padding: 20px;
     width: 100%;
-    height: 100px;
+    height: calc(100% - 73px);
 }
 
-.contact {
-    text-align: center;
+.skill-icon {
+    display: flex;
+    justify-content: flex-start;
+    // align-items: center;
+    // flex-wrap: wrap;
+    gap: 35px;
+}
+
+.skill-icon>li {
+    display: flex;
+    gap: 20px;
+    position: relative;
+
+    &:hover>.skill-explain {
+        opacity: 1;
+    }
+}
+
+.skill-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    border: 1px solid $bColor;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 11px 10px 10px 10px;
+}
+
+.skill-img:nth-child(4) {
+    padding: 13px 10px 10px 10px;
+}
+
+.skill-explain {
+    position: absolute;
+    left: 100px;
+    min-width: 400px;
+    max-width: 400px;
+    text-align: left;
+    opacity: 0;
+    transition: left 250ms ease, opacity 400ms ease;
 }

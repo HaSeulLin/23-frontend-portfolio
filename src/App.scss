@@ -1,15 +1,18 @@
+$bColor : rgba(186,173,182,1);
+$dColor : rgba(0,0,5,1);
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	cursor: none;
+	color: white;
 }
 
 html,
 body {
-	background: linear-gradient(-45deg, #036b91, #2a99c2, #14a886, #0c6b55);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	background: linear-gradient(180deg, rgba(0,0,5,1) 0%, rgba(37,58,75,1) 60%, rgba(186,173,182,1) 100%);
+	background-size: 400%;
 	height: 100vh;
 	cursor: none;
 	-ms-overflow-style: none;
@@ -22,23 +25,13 @@ body {
 	display: none;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 a {
 	text-decoration: none;
 	color: black;
+}
+
+li {
+	list-style: none;
 }
 
 .cursor {

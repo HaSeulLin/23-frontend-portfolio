@@ -35,13 +35,16 @@ export default function Header() {
                     <div className={`${header["menu-list"]}`}>
                         <Link
                             to="/"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
+                            // onMouseEnter={handleMouseEnter}
+                            // onMouseLeave={handleMouseLeave}
                             className={`${header[onNav]}`}
                         >
                             About
                         </Link>
-                        <Link to="/" className={`${header[onNav]}`}>
+                        <Link to="/"
+                            // onMouseEnter={handleMouseEnter}
+                            // onMouseLeave={handleMouseLeave}
+                            className={`${header[onNav]}`}>
                             Stack
                         </Link>
                         <Link to="/" className={`${header[onNav]}`}>
